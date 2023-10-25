@@ -3,8 +3,27 @@ import "./FeaturedProducts.scss";
 import Card from "../Card/Card";
 
 const FeatureProducts = ({type}) => {
+  const data=[
+    {
+      id:1,
+      img:"https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      title:"longe",
+      isNew:true,
+      oldPrice:19,
+      price:12
+    },
+    {
+      id:2,
+      img:"https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      title:"longe",
+      isNew:true,
+      oldPrice:19,
+      price:12
+    },
+    
+  ]
   return (
-    <div className='featureproducts'>
+    <div className='featuredproducts'>
         <div className='top'>
             <h1>{type} products</h1>
             <p>
@@ -17,7 +36,7 @@ const FeatureProducts = ({type}) => {
         </div>
         <div className='bottom'>
             {data.map(item=>(
-                <Card itemm={item} key={itemm.id}/>
+                <Card item={item} key={item.id}/>
             ))}
         </div>
     </div>
